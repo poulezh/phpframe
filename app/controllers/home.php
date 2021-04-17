@@ -4,9 +4,10 @@ Class Home extends Controller
 {
     function index()
     {
-        $image_class = $this->loadModel("image_class");
-        show($image_class);
-        $this->view("home");    
+              
+        $data['page_title'] = "Home";       
+
+        $this->view("home", $data);    
     }
 
 } 
