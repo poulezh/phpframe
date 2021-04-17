@@ -1,10 +1,12 @@
 <?php
-// домашний контроллер динии управления
-Class Home
+
+Class Home extends Controller
 {
     function index()
     {
-
-        echo "home page index methofd";
+        $image_class = $this->loadModel("image_class");
+        show($image_class);
+        $this->view("home");    
     }
+
 } 
